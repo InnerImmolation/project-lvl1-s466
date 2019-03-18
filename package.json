@@ -1,0 +1,33 @@
+{
+  "name": "dmdupr1",
+  "version": "1.0.0",
+  "description": "hex pr 1",
+  "main": "index.js",
+  "scripts": {
+    "test":"jest", 
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InnerImmolation/project-lvl1-s466.git"
+  },
+  "author": "Dmitriy Dubovtsev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InnerImmolation/project-lvl1-s466/issues"
+  },
+  "homepage": "https://github.com/InnerImmolation/project-lvl1-s466#readme",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4"
+  },
+ "bin": {
+ "brain-games": "dist/bin/brain-games.js"
+},
+ "files": [
+    "dist"
+  ]
+}
