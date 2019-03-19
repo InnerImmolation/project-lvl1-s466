@@ -4,7 +4,6 @@
   "description": "console logical games for my first project",
   "keywords": "games, console games, logical games, hexlet",
   "scripts": {
-    "test": "no test",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
