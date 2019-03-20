@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import game from '..';
+import even from '../games/even-engine';
 
-game();
+even();
