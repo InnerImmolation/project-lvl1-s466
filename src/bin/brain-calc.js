@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import calc from '../games/calc-engine';
+import { gameGn, description } from '../games/calc-game';
+import game from '../core';
 
-calc();
+game(gameGn, description);

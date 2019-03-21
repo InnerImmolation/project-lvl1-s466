@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
 
-const finScores = 3;// scores need to win
+const scoresToWin = 3;// scores need to win
 
-const game = (gameGn, rules) => {
-  console.log(`Welcome to the Brain Games! \n${rules}`);
+const game = (gameGn, description) => {
+  console.log(`Welcome to the Brain Games! \n${description}`);
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   const iter = (scores) => {
     const [question, trueAnswer] = gameGn();
-    if (scores === finScores) {
+    if (scores === scoresToWin) {
       console.log(`Congratulations, ${name}!`);
       return '';
     }
@@ -17,8 +17,7 @@ const game = (gameGn, rules) => {
       console.log('Correct!');
       return iter(scores + 1);
     }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${name}!`);
-    return '';
+    return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${name}!`);
   };
   return iter(0);
 };

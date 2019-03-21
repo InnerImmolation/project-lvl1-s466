@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import gcd from '../games/gcd-engine';
+import { gameGn, description } from '../games/gcd-game';
+import game from '../core';
 
-gcd();
+game(gameGn, description);

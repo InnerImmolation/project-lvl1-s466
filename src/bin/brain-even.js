@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import even from '../games/even-engine';
+import { gameGn, description } from '../games/even-game';
+import game from '../core';
 
-even();
+game(gameGn, description);
