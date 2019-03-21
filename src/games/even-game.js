@@ -8,7 +8,7 @@ const isEven = x => x % 2 === 0;
 
 const gameGn = () => {
   const num = getRandom(min, max);
-  const question = `Question:${num} `;
+  const question = num;
   const trueAnswer = isEven(num) ? 'y' : 'n';
   return [question, trueAnswer];
 };

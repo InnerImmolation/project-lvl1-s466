@@ -10,7 +10,7 @@ const gameGn = () => {
   const num1 = getRandom(min, max);
   const num2 = getRandom(min, max);
   const operand = arRandom(allOperands);
-  const question = `Question:${num1}${operand}${num2}? `;
+  const question = `${num1}${operand}${num2}`;
   let trueAnswer = 0;
   switch (operand) {
     case '+': trueAnswer = num1 + num2;

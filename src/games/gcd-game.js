@@ -14,7 +14,7 @@ const gameGn = () => {
     }
     return n1 > n2 ? nod(n1 % n2, n2) : nod(n1, n2 % n1);
   };
-  const question = `Question:${num1} ${num2}? `;
+  const question = `${num1} ${num2}`;
   const trueAnswer = nod(num1, num2);
 
   return [question, trueAnswer];
