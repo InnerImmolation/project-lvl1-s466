@@ -19,4 +19,4 @@ const gameGn = () => {
 
   return [question, trueAnswer];
 };
-export default game(gameGn, description);
+export default () => game(gameGn, description);

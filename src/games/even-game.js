@@ -12,4 +12,4 @@ const gameGn = () => {
   const trueAnswer = isEven(num) ? 'y' : 'n';
   return [question, trueAnswer];
 };
-export default game(gameGn, description);
+export default () => game(gameGn, description);
