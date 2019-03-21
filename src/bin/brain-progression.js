@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { gameGn, description } from '../games/brain-progression';
-import game from '../core';
+import game from '../games/progression-game';
 
-game(gameGn, description);
+game();

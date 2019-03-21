@@ -1,4 +1,5 @@
 import { getRandom, seqGen } from '../utilits';
+import game from '../core';
 
 const min = 1; // min numder for random generator
 const max = 30; // max number for random generator
@@ -19,4 +20,4 @@ const gameGn = () => {
 
   return [question, trueAnswer];
 };
-export { gameGn, description };
+export default game(gameGn, description);

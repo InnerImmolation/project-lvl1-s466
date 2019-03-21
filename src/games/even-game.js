@@ -1,4 +1,5 @@
 import { getRandom } from '../utilits';
+import game from '../core';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const min = 1; // min numder for random generator
@@ -11,4 +12,4 @@ const gameGn = () => {
   const trueAnswer = isEven(num) ? 'y' : 'n';
   return [question, trueAnswer];
 };
-export { gameGn, description };
+export default game(gameGn, description);
