@@ -4,7 +4,7 @@ import game from '../core';
 const min = 1; // min numder for random generator
 const max = 30; // max number for random generator
 const description = 'What number is missing in the progression?';
-const sequenceGenerator = (first, length, step) => {
+const sequenceGenerate = (first, length, step) => {
   const iter = (num, i, acc) => {
     if (i === 0) {
       return acc;
@@ -15,16 +15,16 @@ const sequenceGenerator = (first, length, step) => {
 };
 
 const gameGn = () => {
-  const seqLength = 10;
-  const seqStep = getRandom(1, 5);
-  const hideElement = getRandom(0, 9);
+  const sequenceLength = 10;
+  const sequenceStep = getRandom(1, 5);
+  const hideElement = getRandom(0, sequenceLength - 1);
   const startNumber = getRandom(min, max);
 
-  const gameSeq = sequenceGenerator(startNumber, seqLength, seqStep);
-  const hideSeq = gameSeq.slice(0);
+  const gameSequence = sequenceGenerate(startNumber, sequenceLength, sequenceStep);
+  const hideSequence = gameSequence.slice(0);
 
-  const trueAnswer = hideSeq.splice(hideElement, 1, '..');
-  const question = hideSeq;
+  const trueAnswer = hideSequence.splice(hideElement, 1, '..');
+  const question = hideSequence;
 
 
   return [question, trueAnswer];
