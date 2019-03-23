@@ -6,7 +6,7 @@ const max = 30; // max number for random generator
 const allOperands = ['+', '-', '*']; // array of operands
 const description = 'What is the result of the expression?';
 
-const gameGn = () => {
+const gameGenerate = () => {
   const num1 = getRandom(min, max);
   const num2 = getRandom(min, max);
   const operand = arRandom(allOperands);
@@ -23,4 +23,4 @@ const gameGn = () => {
   }
   return [question, trueAnswer];
 };
-export default () => game(gameGn, description);
+export default () => game(gameGenerate, description);

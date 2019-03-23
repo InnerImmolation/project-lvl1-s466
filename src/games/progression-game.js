@@ -14,7 +14,7 @@ const sequenceGenerate = (first, length, step) => {
   return iter(first, length, []);
 };
 
-const gameGn = () => {
+const gameGenerate = () => {
   const sequenceLength = 10;
   const sequenceStep = getRandom(1, 5);
   const hideElement = getRandom(0, sequenceLength - 1);
@@ -29,4 +29,4 @@ const gameGn = () => {
 
   return [question, trueAnswer];
 };
-export default () => game(gameGn, description);
+export default () => game(gameGenerate, description);
