@@ -1,4 +1,4 @@
-import getRandom from '../utilits';
+import { getRandom } from '../utilits';
 import game from '../core';
 
 const minRandomNumber = 1;
@@ -11,7 +11,7 @@ const findGcd = (n1, n2) => {
 };
 const description = 'Find the greatest common divisor of given numbers.';
 
-const makeQuestion = () => {
+const makeGameData = () => {
   const num1 = getRandom(minRandomNumber, maxRandomNumber);
   const num2 = getRandom(minRandomNumber, maxRandomNumber);
   const question = `${num1} ${num2}`;
@@ -19,4 +19,4 @@ const makeQuestion = () => {
 
   return [question, trueAnswer];
 };
-export default () => game(makeQuestion, description);
+export default () => game(makeGameData, description);

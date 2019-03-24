@@ -17,8 +17,8 @@ const game = (makeQuestion, description) => {
       console.log('Correct!');
       return iter(roundCounter + 1);
     }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
-    return `Let's try again, ${name}!`;
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.Let's try again, ${name}!`);
+    return false;
   };
   return iter(0);
 };

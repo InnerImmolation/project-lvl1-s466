@@ -1,4 +1,4 @@
-import getRandom from '../utilits';
+import { getRandom } from '../utilits';
 import game from '../core';
 
 const isPrime = (number) => {
@@ -8,11 +8,11 @@ const isPrime = (number) => {
   const iter = (num, i) => {
     if (i <= Math.sqrt(num)) {
       if (num % i === 0) {
-        return true;
+        return false;
       }
       return iter(num, i + 1);
     }
-    return false;
+    return true;
   };
   return iter(number, 2);
 };
@@ -20,10 +20,10 @@ const minRandomNumber = 1;
 const maxRandomNumber = 1747;
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-const makeQuestion = () => {
-  const num = getRandom(minRandomNumber, maxRandomNumber);
-  const trueAnswer = isPrime(num) ? 'n' : 'y';
+const makeGameData = () => {
+  const question = getRandom(minRandomNumber, maxRandomNumber);
+  const trueAnswer = isPrime(question) ? 'y' : 'n';
 
-  return [num, trueAnswer];
+  return [question, trueAnswer];
 };
-export default () => game(makeQuestion, description);
+export default () => game(makeGameData, description);
