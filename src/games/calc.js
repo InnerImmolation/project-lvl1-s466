@@ -1,10 +1,20 @@
-import { getRandom, calculate } from '../utilits';
+import getRandom from '../utilits';
 import game from '../core';
 
+const calculate = (operator) => {
+  const func = {
+    '+': (n1, n2) => n1 + n2,
+    '-': (n1, n2) => n1 - n2,
+    '*': (n1, n2) => n1 * n2,
+  };
+  return func[operator];
+};
 const minRandomNumber = 1;
 const maxRandomNumber = 30;
 const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
+
+
 const makeGameData = () => {
   const num1 = getRandom(minRandomNumber, maxRandomNumber);
   const num2 = getRandom(minRandomNumber, maxRandomNumber);

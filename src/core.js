@@ -10,7 +10,8 @@ const game = (makeQuestion, description) => {
   const iter = (roundCounter) => {
     const [question, trueAnswer] = makeQuestion();
     if (roundCounter === totalRounds) {
-      return console.log(`Congratulations, ${name}!`);
+      console.log(`Congratulations, ${name}!`);
+      return true;
     }
     const answer = readlineSync.question(`Question:${question} `);
     if (answer === trueAnswer) {

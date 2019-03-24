@@ -18,7 +18,7 @@ Brain games is a cli-based logical games kit. This package is included 5 games.
 <a href="https://asciinema.org/a/NusPPRIcmSK76LOTMEO7e9Tdm" target="_blank"><img src="https://asciinema.org/a/NusPPRIcmSK76LOTMEO7e9Tdm.svg" /></a>
 
 <h1>Brain-even</h1>
-<p>Try to guess if the number is even..<p>
+<p>Try to guess if the number is even.<p>
 <pre><code>$brain-even
 </code></pre>
 <a href="https://asciinema.org/a/UIax9n6EZAh6Yxzjthb2mvsiF" target="_blank"><img src="https://asciinema.org/a/UIax9n6EZAh6Yxzjthb2mvsiF.svg" /></a>
