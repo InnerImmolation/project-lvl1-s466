@@ -11,15 +11,15 @@ const game = (makeQuestion, description) => {
     const [question, trueAnswer] = makeQuestion();
     if (roundCounter === totalRounds) {
       console.log(`Congratulations, ${name}!`);
-      return true;
+      return;
     }
     const answer = readlineSync.question(`Question:${question} `);
-    if (answer === trueAnswer) {
-      console.log('Correct!');
-      return iter(roundCounter + 1);
+    if (answer !== trueAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.Let's try again, ${name}!`);
+      return;
     }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.Let's try again, ${name}!`);
-    return false;
+    console.log('Correct!');
+    iter(roundCounter + 1);
   };
   return iter(0);
 };
